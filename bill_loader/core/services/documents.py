@@ -37,11 +37,9 @@ def handle_client_org(client_df: pandas.DataFrame, org_df: pandas.DataFrame):
     """ Сохраняет в БД данные о клиентах и организациях из датафрейма """
 
     for index, row in client_df.iterrows():
-        print(row['name'])
         Client.objects.get_or_create(name=row['name'])
 
     for index, row in org_df.iterrows():
-        print(f'{row["client_name"]} -- {row["name"]} -- {row["address"]}')
         with transaction.atomic():
             client, _ = Client.objects.get_or_create(name=row["client_name"])
             address = row["address"]

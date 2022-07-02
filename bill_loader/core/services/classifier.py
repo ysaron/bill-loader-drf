@@ -13,7 +13,7 @@ services = {
 def random_classifier(service_raw: str) -> dict:
     """
     :param service_raw: не используется здесь
-    :return: словарь, распаковываемый в Model.create()
+    :return: словарь, распаковываемый в Model.objects.create()
     """
     class_, name = random.choice(list(services.items()))
     return {
