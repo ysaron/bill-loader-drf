@@ -10,7 +10,7 @@
 
 Клонировать репозиторий:
 ```shell
-git clone https://github.com/ysaron/drf-bill-loader.git
+git clone https://github.com/ysaron/bill-loader-drf.git
 ```
 
 В корне проекта создать `.env.dev` и задать в нем следующие переменные окружения:
